@@ -23,7 +23,7 @@ var detectNetwork = function(cardNumber) {
   	return 'American Express';
   } else if (cardNumber.length === 16 && (prefix >= 51 && prefix <= 55)) {
   	return 'MasterCard';
-  } else if ((cardNumber.length === 16 || cardNumber.length === 19) && (prefix === 65 || (prefix3 >= 644 && prefix3 <=649) || prefix4 === 6011)) {
+  } else if ((cardNumber.length === 16 || cardNumber.length === 19) && (prefix === 65 || prefix4 === 6011 || (prefix3 >= 644 && prefix3 <=649))) {
   	return 'Discover';
   } else if ((cardNumber.length >= 12 && cardNumber.length <=19) && (prefix4 === 5018 || prefix4 === 5020 || prefix4 === 5038 || prefix4 === 6304)) {
   	return 'Maestro';
